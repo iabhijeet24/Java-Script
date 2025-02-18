@@ -44,3 +44,46 @@ function createHelloWorld(){
 
 let hello= createHelloWorld()
 console.log( hello() )
+
+
+
+// BUILT IN HIGHER ORDER FUNCTION IN JS
+
+// map(): Transforms an array by applying a function to each element.
+{
+const numbers = [1, 2, 3, 4];
+const squared = numbers.map(x => x * x);
+console.log(squared);  
+}
+
+{
+var numbers = [1, 2, 3, 4];
+
+function double(num) {
+  return num * 2;
+}
+
+var doubledNumbers = numbers.map(double);
+console.log(doubledNumbers);
+}
+
+
+// filter(): Creates a new array with all elements that pass a test.
+{
+const numbers = [1, 2, 3, 4];
+const evens = numbers.filter(x => x % 2 === 0);
+console.log(evens);  
+}
+
+// reduce(): Accumulates a single result by applying a function to each element.
+{
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((total, current) => total + current, 0);
+console.log(sum);  
+}
+
+// forEach(): Executes a function on each item in an array but doesn't return a new array.
+{
+const numbers = [1, 2, 3, 4];
+numbers.forEach(num => console.log(num * 2));
+}
