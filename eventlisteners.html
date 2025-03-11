@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <button>Click Me </button>
+    <div id="div-container"></div>
+    <button id="button">Click Me </button>
+    <script>
+
+// element.addEventListener(event, function);
+// element → The HTML element where you want to detect an event.
+// event → The type of event (e.g., "click", "mouseover", "keydown").
+// function → The function that runs when the event happens.
+
+    const container = document.getElementById('div-container');
+    const clickbutton = document.getElementById('button');
+
+    clickbutton.addEventListener("click",() =>{
+        const el = document.createElement("h1");
+        el.innerText= "Javascript";
+        container.appendChild(el);
+    });
+    </script>
 </body>
 </html>
