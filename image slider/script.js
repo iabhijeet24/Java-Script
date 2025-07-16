@@ -1,11 +1,13 @@
 let currentIndex = 0;
 
-const slides = document.querySelectorAll('.slide');
+const slides = document.getElementById('slides');
 const slider = document.getElementById('slider');
 
 function updateSlider() {
   slider.style.transform = `translateX(${-currentIndex * 100}%)`;
 }
+
+
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slides.length;
